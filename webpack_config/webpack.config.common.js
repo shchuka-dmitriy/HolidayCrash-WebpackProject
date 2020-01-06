@@ -1,15 +1,31 @@
 const path = require( 'path' );
 const HtmlWebpackPlugin = require( 'html-webpack-plugin' );
+const CopyWebpackPlugin = require( 'copy-webpack-plugin' );             //нужен для копирования компонентов, созданных не в js
 const MiniCssExtractPlugin = require( 'mini-css-extract-plugin' );      //нужен для создания файла CSS для каждого файла JS, который содержит CSS
+
+
+const { ASSETS_PATH } = require( './constants/paths/index.js' );
 
 const config = {
     entry: './src/index.js',
     output: {                                                           //output у prod и dev один
         filename: 'main.js',
-        path: path.resolve( __dirname, '../build' ),
+        path: path.resolve( __dirname, '../build' ),                    //путь к дерриктории, в которой будут создаваться/билдится файлы
     },
+    context: path.resolve( __dirname, '../src' ),                       //путь к дерриктории, в которой содержится родной/базовый файл
 
     plugins: [
+        new CopyWebpackPlugin( [                                        //копирует отдельные файлы или целые каталоги, которые уже существуют, в каталог сборки (в build)
+            {
+                from: '../src/assets/images', to: '../build/assets/images',
+            },
+            {
+                from: '../src/assets/fonts', to: '../build/assets/fonts',
+            },
+            {
+                from: '../src/data', to: '../build/data',
+            },
+        ] ),
         new HtmlWebpackPlugin( {
             template: 'index.html',
             meta: {
@@ -20,7 +36,7 @@ const config = {
     ],
 
     module: {
-        rules: [
+        rules: [                                                       //правила и настройки вєбпаку для обработки файлов
             /*
             STYLES RULE
             для обработки стилей
@@ -32,6 +48,7 @@ const config = {
                         loader: MiniCssExtractPlugin.loader,
                         options: {
                             hmr: process.env.NODE_ENV === 'development',
+                            //publicPath: '../../',
                         }
                     },
                     {
@@ -66,8 +83,8 @@ const config = {
                         loader: 'file-loader',
                         options: {
                             name: '[name].[ext]',                       //каждый файл при build будет создаваться с именем [name] и расширением [ext]
-                            outputPath: 'assets/images',                //путь, где будет создаваться файл
-                            publicPath: 'assets/images',                //для ссылок
+                            outputPath: 'assets/images',                //путь, где будет создаваться файл, относительно path в стр. 13
+                            publicPath: 'assets/images',                //указывается путь на созданный файл, с помощью которого на него мугут ссылаться другие файлы
                         }
                     }
                 ]
@@ -83,8 +100,8 @@ const config = {
                         loader: 'file-loader',
                         options: {
                             name: '[name].[ext]',                       //каждый файл при build будет создаваться с именем [name] и расширением [ext]
-                            outputPath: 'assets/fonts',                 //путь, где будет создаваться файл
-                            publicPath: 'assets/fonts',                 //для ссылок
+                            outputPath: 'assets/fonts',                 //путь, где будет создаваться файл, относительно path в стр. 13
+                            publicPath: 'assets/fonts',                 //указывается путь на созданный файл, с помощью которого на него мугут ссылаться другие файлы
                         }
                     }
                 ]

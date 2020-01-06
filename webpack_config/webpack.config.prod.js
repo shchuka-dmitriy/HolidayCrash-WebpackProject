@@ -5,7 +5,7 @@ const { CleanWebpackPlugin } = require( 'clean-webpack-plugin' );               
 const productionConfig = merge(commonConfig, {
     mode: 'production',
     optimization: {
-        splitChunks: {                                                                 //для извлечения CSS в одном файле CSS с помощью optimization.splitChunks.cacheGroups
+        splitChunks: {                                                                 //для извлечения CSS в однин файл CSS с помощью optimization.splitChunks.cacheGroups
             cacheGroups: {
                 styles: {
                     name: 'styles',

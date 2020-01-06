@@ -1,3 +1,4 @@
-import './assets/scss/styles.scss';
+import './assets/sass/styles.scss';
 import './assets/css/reset.css';
-import _ from 'lodash';
+
+import 'lodash';
