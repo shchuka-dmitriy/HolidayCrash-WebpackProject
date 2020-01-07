@@ -1,0 +1,76 @@
+@import "theme";
+@import "break-points";
+
+#pageFooter{
+  margin-top: auto;
+  color: white;
+  text-align: center;
+  font-size: 14px;
+
+  p{
+    color: rgba(255, 255, 255, 0.5);
+    margin-bottom: 10px;
+    line-height: 1.6;
+  }
+}
+
+.footerTop{
+  background-color: #3a3e64;
+  padding-top: 50px;
+}
+
+.footerContainer{
+  display: flex;
+  flex-direction: column;                          //для телефона в колонку
+
+  @media screen and (min-width: $lg) {             //если размер экрана выше 992 (lg в break-points) в строку
+    flex-direction: row;
+  }
+}
+
+.footerItem{
+  flex: 1;                                        //все элементы одинаковые по размеру
+  margin-bottom: 50px;
+
+  @media screen and (min-width: $md){
+    margin-bottom: 80px;
+  }
+
+  h5 {                                            //h5 в footerItem
+    text-transform: uppercase;
+    margin: 10px 0 20px;
+    font-weight: 700;
+    line-height: 1.1;
+  }
+
+  li {
+    display: inline-block;
+  }
+
+  a {
+    border-width: 2px !important;
+  }
+
+  a:hover, a:active{
+    border-color: $accent-color;                  //цвет $accent-color из theme.scss
+    background-color: $accent-color;
+  }
+}
+
+
+.footerBottom{
+  background-color: #313454;
+  padding: 20px 0;
+
+  a {
+    color: white;
+  }
+
+  a:hover {
+    color: $accent-color;
+  }
+
+  i {
+    color: $accent-color;
+  }
+}

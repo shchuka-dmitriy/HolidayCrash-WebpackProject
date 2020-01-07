@@ -1,0 +1,32 @@
+@import "footer";
+
+body{
+  font-family: 'Raleway', sans-serif;
+  font-weight: 400;
+
+  display: flex;
+  flex-flow: column nowrap;              //краткая запись flex-direction и flex-wrap
+  min-height: 100vh;
+}
+
+*{
+  box-sizing: border-box;
+}
+
+.socialIcons, .footerItem a {
+  border: 1px solid rgb(232, 236, 238);
+  border-radius: 2px;
+  display: block;                       //чтобы width сработал
+  width: 40px;
+  height: 40px;
+  line-height: 40px;
+}
+
+a {
+  text-decoration: none;
+  color: inherit;                       //задаем цвет - унаследовать
+}
+
+a:hover, a:active {
+  transition: background-color, color, 0.3s;
+}

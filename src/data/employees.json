@@ -1,0 +1,42 @@
+[
+  {
+    "name": "Ruth Wood",
+    "position": "FOUNDER, CEO",
+    "contacts": [
+      "test",
+      "test",
+      "facebook/test"
+    ],
+    "profilePicture": "./assets/images/team-1.jpg"
+  },
+  {
+    "name": "Timothy Reed",
+    "position": "CO-FOUNDER, DEVELOPER",
+    "contacts": [
+      "test",
+      "test",
+      "facebook/test"
+    ],
+    "profilePicture": "./assets/images/team-2.jpg"
+  },
+  {
+    "name": "Victoria Valdez",
+    "position": "UI DESIGNER",
+    "contacts": [
+      "test",
+      "test",
+      "facebook/test"
+    ],
+    "profilePicture": "./assets/images/team-3.jpg"
+  },
+  {
+    "name": "Beverly Little",
+    "position": "data scientist",
+    "contacts": [
+      "test",
+      "test",
+      "facebook/test"
+    ],
+    "profilePicture": "./assets/images/team-4.jpg"
+  }
+]

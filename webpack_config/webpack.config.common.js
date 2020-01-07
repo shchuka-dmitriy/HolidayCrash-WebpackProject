@@ -2,12 +2,12 @@ const path = require( 'path' );
 const HtmlWebpackPlugin = require( 'html-webpack-plugin' );
 const CopyWebpackPlugin = require( 'copy-webpack-plugin' );             //нужен для копирования компонентов, созданных не в js
 const MiniCssExtractPlugin = require( 'mini-css-extract-plugin' );      //нужен для создания файла CSS для каждого файла JS, который содержит CSS
-
+const MediaQueryPlugin = require( 'media-query-plugin' );
 
 const { ASSETS_PATH } = require( './constants/paths/index.js' );
 
 const config = {
-    entry: './src/index.js',
+    entry: './index.js',
     output: {                                                           //output у prod и dev один
         filename: 'main.js',
         path: path.resolve( __dirname, '../build' ),                    //путь к дерриктории, в которой будут создаваться/билдится файлы
@@ -26,13 +26,16 @@ const config = {
                 from: '../src/data', to: '../build/data',
             },
         ] ),
+        new MiniCssExtractPlugin(
+        //{filename: 'assets/css/style.css'}                            //для того чтобы style.css в build создавался в assets/css (но плохо работает)
+        ),
+
         new HtmlWebpackPlugin( {
             template: 'index.html',
             meta: {
                 viewport: 'width=device-width, initial-scale=1',
             }
-        } ),
-        new MiniCssExtractPlugin( ),
+        } )
     ],
 
     module: {
@@ -47,8 +50,7 @@ const config = {
                     {
                         loader: MiniCssExtractPlugin.loader,
                         options: {
-                            hmr: process.env.NODE_ENV === 'development',
-                            //publicPath: '../../',
+                            hmr: process.env.NODE_ENV === 'development'
                         }
                     },
                     {
