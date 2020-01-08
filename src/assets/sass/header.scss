@@ -1,0 +1,266 @@
+@import "theme";
+@import "break-points";
+
+.pageTopBanner {
+  background-image: url("../images/banner.jpg");
+  background-position: center top;
+  background-repeat: no-repeat;
+  background-size: cover;
+
+  margin-bottom: auto;
+  color: rgba(255, 255, 255, 0.75);
+  text-align: center;
+  font-size: 13px;
+  font-weight: 700;
+  min-height: 750px;
+}
+
+#pageHeader {
+  position: fixed;
+  width: 100%;
+  z-index: 999;
+  transition-property: background-color;
+  transition-duration: 0.3s;
+  //transition-timing-function: ease;
+}
+
+.fixed {
+  background-color: #292c47;
+
+  .headerContainer {
+    padding: 25px 0;
+    border-bottom: 0;
+  }
+}
+
+.headerContainer {
+  display: flex;
+  flex-direction: row;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.15);
+  width: 90%;
+  padding: 40px 0;
+  transition: padding 0.3s;
+  justify-content: space-between;
+  align-items: center;
+
+  @media screen and (min-width: $xl) {
+    flex-direction: row;
+    justify-content: space-between;
+    width: 970px;
+  }
+
+  @media screen and (min-width: $lg) {
+    width: 90%;
+  }
+
+
+  ul {
+    display: flex;
+    flex-direction: row;
+    margin: 0;
+    padding: 0;
+  }
+
+  a:hover {
+    color: white;
+  }
+}
+
+/*#region dropDownNavMenu*/
+
+.navigation {
+  line-height: 1.42857143;
+  height: 90%;
+  display: block;
+  position: fixed;
+  background-color: #000;
+  top: 0;
+  left: 0;
+  visibility: hidden;
+  opacity: 0;
+  transition: opacity 0.5s, visibility 0.5s;
+
+  a {
+    color: rgba(255, 255, 255, 0.75);
+    font-size: 14px;
+    font-weight: 700;
+    margin-left: 40px;
+    text-transform: uppercase;
+  }
+
+  @media screen and (min-width: $lg) {
+    background-color: inherit;
+    display: block;
+    visibility: visible;
+    opacity: 100;
+    top: inherit;
+    left: inherit;
+    position: inherit;
+  }
+}
+
+.navigationShow {
+  opacity: 0.9;
+  visibility: visible;
+  transition: opacity 0.5s;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+
+  ul {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+  }
+
+  a {
+    color: rgba(255, 255, 255, 0.75);
+    font-weight: 700;
+    text-transform: uppercase;
+    font-size: 25px;
+    margin: 0;
+    text-align: center;
+  }
+
+  li{
+    padding-bottom: 20px;
+  }
+}
+
+/*endregion dropDownNavMenu*/
+
+/*#region navToggleChanging*/
+
+.navToggle {
+  display: block;
+  background-color: #e84545;
+  position: absolute;
+  padding: 10px;
+  border: 1px solid transparent;
+  width: 44px;
+  height: 44px;
+  border-radius: 50%;
+  top: 51%;
+  right: 2%;
+  transform: translate(-50%, -50%);
+
+  @media screen and (min-width: $lg) {
+    display: none;
+    right: -2%;
+  }
+
+  @media screen and (min-width: $md) {
+    right: 5%;
+  }
+}
+
+.navToggle:focus {
+  outline-width: 0;
+}
+
+.navToggle span {
+  background: white;
+  display: block;
+  transform: rotate(0deg);
+  transition: 0.3s ease all;
+
+  border-radius: 8px;
+  height: 2px;
+  width: 22px;
+  margin-bottom: 3px;
+}
+
+.navToggle .barBot {
+  margin-bottom: 0;
+}
+
+.opened .barTop {
+  transform: rotate(42deg);
+  transform-origin: 15% 15%;
+}
+.opened .barMid {
+  opacity: 0;
+}
+.opened .barBot {
+  transform: rotate(-42deg);
+  transform-origin: 15% 95%;
+}
+
+/*#endregion navToggleChanging*/
+
+.bannerText {
+  padding-top: 30%;
+  color: #fff;
+  font-family: "Open Sans", sans-serif;
+  font-weight: 700;
+
+  h1 {
+    font-size: 42px;
+    text-transform: uppercase;
+    margin: 20px 0 10px;
+    line-height: 1.1;
+
+    @media screen and (min-width: $md) {
+      font-size: 65px;
+    }
+  }
+
+  p {
+    color: #fff;
+    font-size: 18px;
+    font-weight: 300;
+    line-height: 1.5;
+    margin-bottom: 80px;
+    font-family: 'Raleway', sans-serif;
+
+    @media screen and (min-width: $md) {
+      font-size: 22px;
+    }
+
+  }
+
+
+  @media screen and (min-width: $md) {
+    padding-top: 25%;
+  }
+}
+
+.bannerContainer {
+  //width: 750px;
+  @media screen and (min-width: $lg) {
+    width: 970px;
+  }
+
+  @media screen and (min-width: $xl) {
+  width: inherit;
+  }
+}
+
+.bannerTextContainer {
+  margin: 0;
+  padding: 0;
+
+  a:hover {
+    background-color: #e52e2e;
+  }
+
+  @media screen and (min-width: $md) {
+    margin: 0 95px;
+    padding: 0 15px;
+  }
+}
+
+.bannerButton {
+  padding: 18px 40px;
+  background-color: #e84545;
+  color: #fff;
+  font-family: "Open Sans", sans-serif;
+  font-size: 13px;
+  font-weight: 600;
+  border: 0;
+  border-radius: 2px;
+  display: inline-block;
+  text-transform: uppercase;
+}
