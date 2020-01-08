@@ -13,7 +13,6 @@ async function loadFeatures(url) {
 
 loadFeatures('./data/features.json');
 
-
 // fetch('./data/features.json')
 //     .then(response => response.json())
 //     .then( appendFeaturesToList )

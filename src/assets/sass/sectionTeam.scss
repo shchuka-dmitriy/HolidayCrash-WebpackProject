@@ -1,0 +1,95 @@
+@import "theme";
+@import "break-points";
+
+.usersContainer {
+  width: 100%;
+
+  @media screen and (min-width: $md) {
+    width: 750px;
+  }
+
+  @media screen and (min-width: $lg) {
+    width: 970px;
+  }
+
+  @media screen and (min-width: $xl) {
+    width: 1170px;
+  }
+}
+
+.rowUsers {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  margin-right: -15px;
+  margin-left: -15px;
+}
+
+.userCard {
+  margin-bottom: 50px;
+  position: relative;
+  padding-right: 20px;
+  padding-left: 15px;
+  //text-align: center;
+  line-height: 1;
+  @media screen and (min-width: $md) {
+    width: 50%;
+  }
+
+  @media screen and (min-width: $lg) {
+    width: 25%;
+  }
+}
+
+.userContent {
+  margin-top: 20px;
+}
+.userName {
+  font-size: 22px;
+  color: #2d3033;
+  text-transform: capitalize;
+  font-weight: 400;
+  margin-top: 10px;
+  margin-bottom: 10px;
+}
+
+.userDescription {
+  font-size: 14px;
+  line-height: 22.4px;
+  color: #6c7279;
+  margin: 0 0 10px;
+
+  overflow: hidden;
+  display: -webkit-box;
+  -webkit-box-orient: vertical;
+  -webkit-line-clamp: 7;
+  line-clamp: 7;
+}
+
+.userContactsContainer {
+  margin-top: 30px;
+
+  i {
+    border: 1px solid #e8ecee;
+    border-radius: 2px;
+    color: #c6cacc;
+    display: block;
+    font-size: 18px;
+    height: 40px;
+    line-height: 40px;
+    margin-right: 5px;
+    text-align: center;
+    width: 40px;
+  }
+
+  i:hover {
+    border-color: $accent-color;
+    background-color: $accent-color;
+  }
+}
+
+.contacts {
+  display: flex;
+  flex-direction: row;
+}

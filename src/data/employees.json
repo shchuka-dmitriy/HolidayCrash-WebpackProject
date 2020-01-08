@@ -1,42 +1,58 @@
 [
   {
+    "id": 1,
     "name": "Ruth Wood",
     "position": "FOUNDER, CEO",
     "contacts": [
-      "test",
-      "test",
-      "facebook/test"
+      "facebook/test",
+      "twitter/test",
+      "linkedin/test",
+      "googlePlus/test",
+      "dribbble/test"
     ],
-    "profilePicture": "./assets/images/team-1.jpg"
+    "profilePicture": "./assets/images/team-1.jpg",
+    "resume": "Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh, ut fermentum massa justo sit amet risus. Maecenas sed diam eget risus varius blandit sit amet non magna. Nullam quis risus eget urna mollis ornare vel eu leo. Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh, ut fermentum massa justo sit amet risus. Maecenas sed diam eget risus varius blandit sit amet non magna. Nullam quis risus eget urna mollis ornare vel eu leo."
   },
   {
+    "id": 2,
     "name": "Timothy Reed",
     "position": "CO-FOUNDER, DEVELOPER",
     "contacts": [
-      "test",
-      "test",
-      "facebook/test"
+      "facebook/test",
+      "twitter/test",
+      "linkedin/test",
+      "googlePlus/test",
+      "dribbble/test"
     ],
-    "profilePicture": "./assets/images/team-2.jpg"
+    "profilePicture": "./assets/images/team-2.jpg",
+    "resume": "Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh, ut fermentum massa justo sit amet risus. Maecenas sed diam eget risus varius blandit sit amet non magna. Nullam quis risus eget urna mollis ornare vel eu leo."
   },
   {
+    "id": 3,
     "name": "Victoria Valdez",
     "position": "UI DESIGNER",
     "contacts": [
-      "test",
-      "test",
-      "facebook/test"
+      "facebook/test",
+      "twitter/test",
+      "linkedin/test",
+      "googlePlus/test",
+      "dribbble/test"
     ],
-    "profilePicture": "./assets/images/team-3.jpg"
+    "profilePicture": "./assets/images/team-3.jpg",
+    "resume": "Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh, ut fermentum massa justo sit amet risus. Maecenas sed diam eget risus varius blandit sit amet non magna. Nullam quis risus eget urna mollis ornare vel eu leo."
   },
   {
+    "id": 4,
     "name": "Beverly Little",
     "position": "data scientist",
     "contacts": [
-      "test",
-      "test",
-      "facebook/test"
+      "facebook/test",
+      "twitter/test",
+      "linkedin/test",
+      "googlePlus/test",
+      "dribbble/test"
     ],
-    "profilePicture": "./assets/images/team-4.jpg"
+    "profilePicture": "./assets/images/team-4.jpg",
+    "resume": "Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh, ut fermentum massa justo sit amet risus. Maecenas sed diam eget risus varius blandit sit amet non magna. Nullam quis risus eget urna mollis ornare vel eu leo. Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh, ut fermentum massa justo sit amet risus. Maecenas sed diam eget risus varius blandit sit amet non magna. Nullam quis risus eget urna mollis ornare vel eu leo."
   }
 ]
