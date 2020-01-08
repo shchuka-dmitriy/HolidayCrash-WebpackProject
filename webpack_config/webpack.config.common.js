@@ -19,6 +19,9 @@ const config = {
             {
                 from: '../src/assets/images', to: '../build/assets/images',
             },
+            {
+                from: '../src/assets/icons', to: '../build/assets/icons',
+            },
             // {
             //     from: '../src/assets/fonts', to: '../build/assets/fonts',
             // },

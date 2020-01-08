@@ -1,0 +1,70 @@
+@import "theme";
+@import "break-points";
+
+.featuresContainer {
+  width: 100%;
+
+  @media screen and (min-width: $md) {
+    width: 750px;
+  }
+
+  @media screen and (min-width: $lg) {
+    width: 970px;
+  }
+
+  @media screen and (min-width: $xl) {
+    width: 1170px;
+  }
+}
+
+.rowFeatures {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  margin-right: -15px;
+  margin-left: -15px;
+}
+
+.featureCard {
+  //flex: 1;                                        //все элементы одинаковые по размеру
+  margin-bottom: 50px;
+  position: relative;
+  padding-right: 15px;
+  padding-left: 15px;
+  text-align: center;
+  line-height: 1;
+  @media screen and (min-width: $md) {
+    width: 50%;
+  }
+
+  @media screen and (min-width: $lg) {
+    width: 33.3%;
+  }
+}
+
+.featureContent {
+  padding: 0 15px;
+  margin-top: 30px;
+}
+.featureName {
+  font-size: 14px;
+  color: #2d3033;
+  text-transform: uppercase;
+  font-weight: 700;
+  margin-top: 10px;
+  margin-bottom: 10px;
+}
+
+.featureDescription {
+  font-size: 14px;
+  line-height: 22.4px;
+  color: #6c7279;
+  margin: 0 0 10px;
+
+  overflow: hidden;
+  display: -webkit-box;
+  -webkit-box-orient: vertical;
+  -webkit-line-clamp: 4;
+  line-clamp: 4;
+}
