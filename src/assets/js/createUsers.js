@@ -48,7 +48,6 @@ function createUserImageElem({profilePicture}) {
     userImage.setAttribute('src', `${profilePicture}`);
     userImage.setAttribute('alt', 'photo');
     const userImageContainer = document.createElement('div');
-    // featureImageContainer.classList.add('...');
     userImageContainer.appendChild(userImage);
     return  userImageContainer;
 }
@@ -74,10 +73,6 @@ function createUserDescriptionElem({resume}) {
     userDescriptionElem.innerText = `${resume}`;
     return userDescriptionElem;
 }
-
-
-
-
 
 function createUserContactsContainer(user) {
     const userContactsContainerElem = document.createElement("div");

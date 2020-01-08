@@ -8,7 +8,7 @@ body {
   font-weight: 400;
 
   display: flex;
-  flex-flow: column nowrap;              //краткая запись flex-direction и flex-wrap
+  flex-flow: column nowrap;
   min-height: 100vh;
 }
 
@@ -19,7 +19,7 @@ body {
 .socialIcons, .footerItem a {
   border: 1px solid rgb(232, 236, 238);
   border-radius: 2px;
-  display: block;                       //чтобы width сработал
+  display: block;
   width: 40px;
   height: 40px;
   line-height: 40px;
@@ -27,7 +27,7 @@ body {
 
 a {
   text-decoration: none;
-  color: inherit;                       //задаем цвет - унаследовать
+  color: inherit;
 }
 
 a:hover, a:active {

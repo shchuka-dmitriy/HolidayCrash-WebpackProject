@@ -4,8 +4,6 @@ const CopyWebpackPlugin = require( 'copy-webpack-plugin' );             //нуж
 const MiniCssExtractPlugin = require( 'mini-css-extract-plugin' );      //нужен для создания файла CSS для каждого файла JS, который содержит CSS
 const MediaQueryPlugin = require( 'media-query-plugin' );
 
-const { ASSETS_PATH } = require( './constants/paths/index.js' );
-
 const config = {
     entry: './index.js',
     output: {                                                           //output у prod и dev один

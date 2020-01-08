@@ -19,7 +19,6 @@ loadFeatures('./data/features.json');
 //     .catch(console.error);
 
 function appendFeaturesToList (features) {
-    //console.log(features);
     const featuresListElem = document.getElementById('rowFeaturesContainer');
 
     features.forEach(
@@ -48,7 +47,6 @@ function createFeatureImageElem({featurePicture}) {
     featureImage.setAttribute('src', `${featurePicture}`);
     featureImage.setAttribute('alt', 'icon');
     const featureImageContainer = document.createElement('div');
-    // featureImageContainer.classList.add('...');
     featureImageContainer.appendChild(featureImage);
     return  featureImageContainer;
 }

@@ -21,22 +21,22 @@
 
 .footerContainer {
   display: flex;
-  flex-direction: column;                          //для телефона в колонку
+  flex-direction: column;
 
-  @media screen and (min-width: $lg) {             //если размер экрана выше 992 (lg в break-points) в строку
+  @media screen and (min-width: $lg) {
     flex-direction: row;
   }
 }
 
 .footerItem {
-  flex: 1;                                        //все элементы одинаковые по размеру
+  flex: 1;
   margin-bottom: 50px;
 
   @media screen and (min-width: $md){
     margin-bottom: 80px;
   }
 
-  h5 {                                            //h5 в footerItem
+  h5 {
     text-transform: uppercase;
     margin: 10px 0 20px;
     font-weight: 700;
@@ -52,7 +52,7 @@
   }
 
   a:hover, a:active {
-    border-color: $accent-color;                  //цвет $accent-color из theme.scss
+    border-color: $accent-color;
     background-color: $accent-color;
   }
 }
